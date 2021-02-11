@@ -39,7 +39,7 @@ export const ConditionalField = ({ form, tinaForm, input, field }: any) => {
 
 export const ConditionalFieldPlugin: FieldPlugin = {
   __type: 'field',
-  name: 'conditional',
+  name: 'condition',
   Component: ConditionalField,
 }
 

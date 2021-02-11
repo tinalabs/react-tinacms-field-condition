@@ -9,7 +9,6 @@ export const ConditionalGroupField = ({
   field,
 }: any) => {
   const parentField = getParentField(input.name, form)
-  console.log(parentField)
   const conditionalFields: any[] = useMemo(
     () =>
       field.fields.map((subField: any) => {
