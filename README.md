@@ -65,7 +65,7 @@ const fields = [
   { 
     name: "image", 
     label: "Image Fields", 
-    component: "condition",
+    component: "condition-group",
     condition: (value, values) => values.type === "image"
     fields: [
       { name: "src", label: "Image", component: "image" },
@@ -75,7 +75,7 @@ const fields = [
   { 
     name: "video", 
     label: "Video", 
-    component: "condition",
+    component: "condition-group",
     condition: (value, values) => values.type === "video"
     fields: [
       { name: "src", label: "Video", component: "video" },
