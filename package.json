@@ -1,6 +1,6 @@
 {
   "name": "react-tinacms-field-condition",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A TinaCMS field suite for making conditional field logic in forms",
   "author": {
     "name": "Chris D. Macrae",
