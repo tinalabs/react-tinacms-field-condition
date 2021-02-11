@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "declaration": true,
+    "esModuleInterop": true,
+    "target": "es5",
+    "moduleResolution": "Node",
+    "jsx": "react",
+    "lib": ["esnext", "dom"],
+    "baseUrl": ".",
+    "paths": {
+      "*": ["packages/*"]
+    }
+  }
+}

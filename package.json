@@ -1,0 +1,46 @@
+{
+  "name": "react-tinacms-field-condition",
+  "version": "0.1.0",
+  "description": "A TinaCMS field suite for making conditional field logic in forms",
+  "author": {
+    "name": "Chris D. Macrae",
+    "email": "chris@forestry.io"
+  },
+  "license": "Apache-2.0",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "start": "npm run watch",
+    "test": "jest --passWithNoTests",
+    "watch": "tinacms-scripts watch",
+    "dev": "tinacms-scripts dev",
+    "build": "tinacms-scripts build"
+  },
+  "peerDependencies": {
+    "tinacms": ">=0.29"
+  },
+  "devDependencies": {
+    "@tinacms/scripts": "^0.26.0",
+    "@types/js-cookie": "^2.2.6",
+    "commander": "^6.1.0",
+    "dotenv": "^8.2.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "rollup": "^1.21.4",
+    "rollup-plugin-commonjs": "^10.0.1",
+    "rollup-plugin-replace": "^2.2.0",
+    "rollup-plugin-typescript2": "^0.22.0",
+    "rollup-plugin-uglify": "^6.0.4",
+    "styled-components": "^5.2.0",
+    "tinacms": "^0.33.0-alpha.1",
+    "ts-jest": "^24.3.0",
+    "typescript": "^3.8.2",
+    "typescript-plugin-styled-components": "^1.4.4"
+  }
+}

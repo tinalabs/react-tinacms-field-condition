@@ -1,4 +1,4 @@
-import { useMemo } from 'react'
+import React, { useMemo } from 'react'
 import { Field, FieldPlugin, FieldsBuilder } from 'tinacms'
 import { getParentField } from '../getParentField'
 
