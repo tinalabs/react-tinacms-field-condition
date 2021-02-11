@@ -23,8 +23,8 @@ import { ConditionFieldPlugin, ConditionGroupFieldPlugin } from 'react-tinacms-f
 
 const cms = new TinaCMS();
 
-cms.plugins.add(ConditionFieldPlugin);
-cms.plugins.add(ConditionGroupFieldPlugin);
+cms.plugins.add(ConditionalFieldPlugin);
+cms.plugins.add(ConditionalGroupFieldPlugin);
 ```
 
 ### Making A Single Field Conditional
