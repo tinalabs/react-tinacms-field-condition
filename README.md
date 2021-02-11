@@ -19,7 +19,7 @@ npm install react-tinacms-field-condition
 In your code, register the plugin:
 
 ```
-import { ConditionFieldPlugin, ConditionGroupFieldPlugin } from 'react-tinacms-field-condition'
+import { ConditionalFieldPlugin, ConditionalGroupFieldPlugin } from 'react-tinacms-field-condition'
 
 const cms = new TinaCMS();
 
