@@ -6,7 +6,7 @@
     "name": "Chris D. Macrae",
     "email": "chris@forestry.io"
   },
-  "homepage": "https://github.com/tinalabs/react-tinacms-field-grid",
+  "homepage": "https://github.com/tinalabs/react-tinacms-field-condition",
   "license": "Apache-2.0",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -18,7 +18,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tinalabs/react-tinacms-field-grid.git"
+    "url": "git+https://github.com/tinalabs/react-tinacms-field-condition.git"
   },
   "scripts": {
     "start": "npm run watch",
