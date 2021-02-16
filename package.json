@@ -1,6 +1,6 @@
 {
   "name": "react-tinacms-field-condition",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "A TinaCMS field suite for making conditional field logic in forms",
   "author": {
     "name": "Chris D. Macrae",
@@ -21,6 +21,7 @@
     "url": "git+https://github.com/tinalabs/react-tinacms-field-condition.git"
   },
   "scripts": {
+    "prepublish": "npm run build",
     "start": "npm run watch",
     "test": "jest --passWithNoTests",
     "watch": "tinacms-scripts watch",
