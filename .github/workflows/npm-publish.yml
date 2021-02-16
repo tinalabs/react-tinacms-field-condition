@@ -1,0 +1,56 @@
+# This workflow will run tests using node and then publish a package to GitHub Packages when a release is created
+# For more information see: https://help.github.com/actions/language-and-framework-guides/publishing-nodejs-packages
+
+name: Publish Package
+
+on:
+  release:
+    types: [created]
+
+env:
+  CONTENTFUL_SPACE_ID: ${{ secrets.CONTENTFUL_SPACE_ID }}
+  CONTENTFUL_DELIVERY_API_TOKEN: ${{ secrets.CONTENTFUL_DELIVERY_API_TOKEN }}
+  CONTENTFUL_PREVIEW_API_TOKEN: ${{ secrets.CONTENTFUL_PREVIEW_API_TOKEN }}
+  CONTENTFUL_MANAGEMENT_API_TOKEN: ${{ secrets.CONTENTFUL_MANAGEMENT_API_TOKEN }}
+  CONTENTFUL_OAUTH_CLIENT_ID: ${{ secrets.CONTENTFUL_OAUTH_CLIENT_ID }}
+  CONTENTFUL_DEFAULT_ENVIRONMENT_ID: ${{ secrets.CONTENTFUL_DEFAULT_ENVIRONMENT_ID }}
+  CONTENTFUL_ALLOWED_HOSTNAME: ${{ secrets.CONTENTFUL_ALLOWED_HOSTNAME }}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - run: yarn install
+      - run: yarn test
+
+  publish-npm:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+          registry-url: https://registry.npmjs.org/
+      - run: yarn install
+      - run: yarn run publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
+
+  publish-gpr:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+          registry-url: https://npm.pkg.github.com/
+      - run: yarn install
+      - run: yarn run publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
