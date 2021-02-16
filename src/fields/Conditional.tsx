@@ -42,5 +42,7 @@ export const ConditionalFieldPlugin: FieldPlugin = {
   name: 'condition',
   Component: ConditionalField,
 }
+    
+export const ConditionFieldPlugin = ConditionalFieldPlugin;
 
 export default ConditionalFieldPlugin
