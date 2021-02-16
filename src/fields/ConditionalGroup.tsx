@@ -50,5 +50,7 @@ export const ConditionalGroupFieldPlugin: FieldPlugin = {
   name: 'condition-group',
   Component: ConditionalGroupField,
 }
+    
+export const ConditionGroupFieldPlugin = ConditionalGroupFieldPlugin;
 
 export default ConditionalGroupFieldPlugin
