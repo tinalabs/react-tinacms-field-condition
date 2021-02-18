@@ -12,12 +12,12 @@ export const ConditionalGroupField = ({
   const conditionalFields: any[] = useMemo(
     () =>
       field.fields.map((subField: any) => {
-        let fieldName = field.name
-
-        if (field.name && subField.field?.name) {
-          fieldName = [field.name, subField.field.name].join('.')
-        } else if (field.name.length <= 0 && subField.field?.name) {
-          return subField.field.name
+        let fieldName = subfield.name;
+        
+        if (parentField.name && subField?.name) {
+          fieldName = [field.name, subField.name].join('.')
+        } else if (parentField.name && !subfield.Name) {
+          fieldName = parentField.name
         }
 
         return {
@@ -29,7 +29,7 @@ export const ConditionalGroupField = ({
   )
   const shouldShowFields = field.condition(
     input.value,
-    parentField?.value,
+    parentField?.value || tinaForm?.values,
     input,
     tinaForm
   )
