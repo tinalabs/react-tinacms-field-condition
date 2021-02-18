@@ -12,11 +12,11 @@ export const ConditionalGroupField = ({
   const conditionalFields: any[] = useMemo(
     () =>
       field.fields.map((subField: any) => {
-        let fieldName = subfield.name;
+        let fieldName = subField.name;
         
-        if (parentField.name && subField?.name) {
+        if (parentField?.name && subField?.name) {
           fieldName = [field.name, subField.name].join('.')
-        } else if (parentField.name && !subfield.Name) {
+        } else if (parentField?.name && !subField?.Name) {
           fieldName = parentField.name
         }
 
